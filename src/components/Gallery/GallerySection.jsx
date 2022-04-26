@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import PhotoCard from "./PhotoCard";
 
 import photos from "../../../apis/photos.json";
+import ImageCarousel from "./ImageCarousel";
 
 
 const GallerySection = () => {
@@ -11,8 +12,11 @@ const GallerySection = () => {
             <div className="text-3xl font-semibold py-3">
                 Portfolio
             </div>
-            <div className="flex flex-wrap">
+            <div className="hidden md:flex flex-wrap">
                 {photoLists.map(d => <PhotoCard key={d.id} config={d} />)}
+            </div>
+            <div className="md:hidden">
+                <ImageCarousel />
             </div>
         </div>
     );
