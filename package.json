@@ -11,10 +11,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "flowbite": "^1.4.3",
     "gh-pages": "^3.2.3",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "swiper": "^8.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
