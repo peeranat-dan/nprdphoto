@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import EventSection from "./components/Calendar/EventSection";
 import GallerySection from "./components/Gallery/GallerySection";
+import InfoSection from "./components/Details/InfoSection";
 
 
 const App = () => {
@@ -10,7 +11,10 @@ const App = () => {
             <a href="https://www.instagram.com/nprdphoto/">@nprdphoto</a>
         </div>
         <div className="flex flex-col lg:flex-row">
-            <EventSection />
+            <div className="w-full lg:w-1/2">
+                <EventSection />
+                <InfoSection />
+            </div>
             <GallerySection />
         </div>
 
