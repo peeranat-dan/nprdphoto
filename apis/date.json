@@ -1,8 +1,8 @@
 [
   {
-    "date": 1,
+    "date": 4,
     "month": "May",
-    "title": "📷 Freelance",
+    "title": "📷 Freestyle",
     "color": "indigo"
   },
   {
@@ -29,4 +29,5 @@
     "title": "📷 Graduation",
     "color": "indigo"
   }
+
 ]
