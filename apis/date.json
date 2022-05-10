@@ -1,33 +1,66 @@
 [
   {
-    "date": 4,
-    "month": "May",
-    "title": "📷 Freestyle",
-    "color": "indigo"
+    "date":"2022-05-07",
+    "title":"📷 - CU"
   },
   {
-    "date": 7,
-    "month": "May",
-    "title": "📷 Pre-graduation",
-    "color": "indigo"
+    "date":"2022-05-10",
+    "title":"n/a"
   },
   {
-    "date": 12,
-    "month": "May",
-    "title": "⛔ N/A",
-    "color": "pink"
+    "date":"2022-05-11",
+    "title":"n/a"
   },
   {
-    "date": 17,
-    "month": "May",
-    "title": "⛔ N/A",
-    "color": "pink"
+    "date":"2022-05-12",
+    "title":"n/a"
   },
   {
-    "date": 20,
-    "month": "May",
-    "title": "📷 Graduation",
-    "color": "indigo"
+    "date":"2022-05-13",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-14",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-15",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-16",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-17",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-18",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-19",
+    "title":"[tbc]📷 - CU"
+  },
+  {
+    "date":"2022-05-20",
+    "title":"📷 - CU"
+  },
+  {
+    "date":"2022-05-24",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-28",
+    "title":"n/a"
+  },
+  {
+    "date":"2022-05-29",
+    "title":"📷 - TU"
+  },
+  {
+    "date":"2022-05-30",
+    "title":"n/a"
   }
-
 ]

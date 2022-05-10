@@ -1,23 +1,27 @@
-import React, {useState} from "react";
+import React from "react";
 import PhotoCard from "./PhotoCard";
 
 import photos from "../../../apis/photos.json";
+import casualPhotos from "../../../apis/casualPhoto.json";
 import ImageCarousel from "./ImageCarousel";
 
-
 const GallerySection = () => {
-    const [photoLists, setPhotoLists] = useState(photos);
     return (
-        <div className="w-full lg:w-3/5 p-2">
-            <div className="text-3xl font-semibold py-3">
-                Portfolio
+        <div className="w-full mx-auto px-2 pt-2 sm:mb-36">
+            <div className="">
+                <div className="hidden lg:block mx-auto md:mx-10">
+                    <ImageCarousel photos={photos} />
+                </div>
+                <div className="hidden lg:block mx-auto md:mx-10 mt-4">
+                    <ImageCarousel photos={casualPhotos} />
+                </div>
+                <div className="flex flex-col lg:hidden mx-auto md:mx-10 mt-3">
+                    {[...photos, ...casualPhotos].map(photo => {
+                        return <PhotoCard key={photo.id} config={photo} />
+                    })}
+                </div>
             </div>
-            <div className="hidden md:flex flex-wrap">
-                {photoLists.map(d => <PhotoCard key={d.id} config={d} />)}
-            </div>
-            <div className="md:hidden">
-                <ImageCarousel />
-            </div>
+
         </div>
     );
 };
