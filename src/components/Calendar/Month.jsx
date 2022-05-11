@@ -3,7 +3,13 @@ import Day from "./Day";
 import dates from "../../../apis/date.json";
 
 const Month = ({month}) => {
-    const events = dates;
+    const today = new Date();
+    // const events = dates
+    const events = dates.filter(date => {
+        return date.date.includes(today.getFullYear() + '-' + ("0" + (today.getMonth() + 1)).slice(-2))
+            || date.date.includes(today.getFullYear() + '-' + ("0" + (today.getMonth())).slice(-2))
+            || date.date.includes(today.getFullYear() + '-'+ ("0" + (today.getMonth() +2)).slice(-2))
+    });
     return (
         <div className="flex-1 grid grid-cols-7 grid-rows-5 md:bg-white md:rounded-lg md:p-5 select-none">
             {month.map((row, i) => (
