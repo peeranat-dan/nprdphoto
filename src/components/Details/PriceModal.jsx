@@ -45,6 +45,11 @@ const PriceModal = props => {
             setGradBg("text-white bg-myGreen");
             setProfileBg("text-myGreen bg-none");
         } else if (e.target.innerText === "Profile") {
+            if (time === "fullDay") {
+                setTime("halfDay");
+                setHalfBg("text-white bg-myGreen");
+                setFullBg("text-myGreen bg-none");
+            }
             setProfileBg("text-white bg-myGreen");
             setGradBg("text-myGreen bg-none");
         }
