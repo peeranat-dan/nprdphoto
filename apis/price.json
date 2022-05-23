@@ -1,5 +1,11 @@
 {
-  "halfDay": 3500,
-  "fullDay": 4500,
-  "additional": 500
+  "additional": 500,
+  "Graduation": {
+    "halfDay": 3500,
+    "fullDay": 4500
+  },
+  "Profile": {
+    "halfDay": 2000,
+    "fullDay": 3500
+  }
 }

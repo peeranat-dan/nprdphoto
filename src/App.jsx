@@ -35,7 +35,6 @@ const App = () => {
         <div id="event">
             <EventSection />
         </div>
-
         <div id="contact">
             <ContactSection />
         </div>

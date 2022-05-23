@@ -15,11 +15,8 @@ const InfoSection = () => {
         setShowPrice(showPrice => !showPrice)
     };
     return (
-        <div className="w-full p-2">
+        <div className="flex flex-col  lg:flex-row px-5 lg:px-[15rem] py-12 lg:py-24">
             {showPrice && <PriceModal onToggle={togglePriceModal}/>}
-            <div className="text-3xl font-semibold py-3">
-                Information
-            </div>
             <div className="flex flex-wrap">
                 <Card color="bg-indigo-500">
                     <div className="text-xl font-semibold mb-2 flex justify-between items-center">
@@ -35,22 +32,7 @@ const InfoSection = () => {
                         
                     </div>
                 </Card>
-                <Card color="bg-rose-500">
-                    <div className="text-xl font-semibold mb-6">
-                        Contact
-                    </div>
-                    <div className="flex space-x-6">
-                        <a href="mailto:peeranatdan.photo@gmaill.com">
-                            <MailOutlineIcon />
-                        </a>
-                        <a href="https://www.instagram.com/nprdphoto/">
-                            <InstagramIcon />
-                        </a>
-                        <a href="tel:0837772230">
-                            <LocalPhoneOutlinedIcon />
-                        </a>
-                    </div>
-                </Card>
+
             </div>
         </div>
     );

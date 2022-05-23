@@ -7,7 +7,6 @@ const EventLabel = props => {
     } else {
         bgColor = "myGreen";
     }
-    console.log(props.event.title, bgColor)
     return (
         <>
             <div className={`hidden md:flex pl-2 p-1 text-sm mb-1 items-center`}>
@@ -15,7 +14,7 @@ const EventLabel = props => {
                 <div>{props.event.title}</div>
             </div>
             <div className={`flex flex-col md:hidden $bg-{bgColor} p-1 items-center text-white text-sm rounded mb-1`}>
-                <div className={`bg-myRed w-2 h-2 rounded-full text-xl`}>.</div>
+                <div className={`bg-${bgColor} w-2 h-2 rounded-full text-xl`}></div>
             </div>
         </>
     );
