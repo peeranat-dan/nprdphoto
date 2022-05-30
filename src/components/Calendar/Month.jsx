@@ -4,9 +4,7 @@ import dates from "../../../apis/date.json";
 
 const Month = ({month}) => {
     const today = new Date();
-    // const events = dates
     const events = dates.filter(date => {
-        // console.log("date:" + new Date(date.date).getDate() > new Date().getDate())
         return (date.date.includes(today.getFullYear() + '-' + ("0" + (today.getMonth() + 1)).slice(-2))
             || date.date.includes(today.getFullYear() + '-' + ("0" + (today.getMonth())).slice(-2))
             || date.date.includes(today.getFullYear() + '-'+ ("0" + (today.getMonth() +2)).slice(-2)))

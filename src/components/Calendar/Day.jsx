@@ -10,11 +10,6 @@ const Day = ({day, rowIdx, events}) => {
             ? "bg-myGreen text-white font-bold rounded-full w-7"
             : "";
     };
-    const grayOutOverMonth = () => {
-        return day.format('MM') != ("0" + (new Date().getMonth() + 1)).slice(-2)
-            ? "text-gray-400"
-            : "";
-    };
     return (
         <div className="border border-gray-200 flex flex-col">
             <header className="flex flex-col items-center">
@@ -24,7 +19,7 @@ const Day = ({day, rowIdx, events}) => {
                     </p>
                 )}
                 <p
-                    className={`text-sm p-1 my-1 text-center  ${getCurrentDayClass()} ${grayOutOverMonth()}`}
+                    className={`text-sm p-1 my-1 text-center  ${getCurrentDayClass()} `}
                 >
                     {day.format("DD")}
                 </p>
