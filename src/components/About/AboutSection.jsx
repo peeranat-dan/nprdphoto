@@ -6,6 +6,7 @@ import PriceModal from "../Details/PriceModal";
 const AboutSection = () => {
     const startYear = 2016;
     const thisYear = new Date().getFullYear();
+    const src = "https://firebasestorage.googleapis.com/v0/b/photography-profile.appspot.com/o/myPhoto%2FDSC04005(1).jpg?alt=media&token=02590c87-be3c-4eae-9352-bc4dca168353";
     const imgId = "1N969hNrGJ_krHuQoNYZOomJEODMGYVl9";
     const [showPrice, setShowPrice] = useState(false);
     const togglePriceModal = () => {
@@ -15,7 +16,7 @@ const AboutSection = () => {
         <div className="flex flex-col-reverse lg:flex-row px-5 lg:px-[15rem] py-12 lg:py-24">
             {showPrice && <PriceModal onToggle={togglePriceModal}/>}
             <div>
-                <img className="rounded-lg mt-8 lg:mt-0 mx-auto w-full sm:w-[400px]" src={`https://drive.google.com/uc?export=view&id=${imgId}`}/>
+                <img className="rounded-lg mt-8 lg:mt-0 mx-auto w-full sm:w-[400px]" src={src}/>
             </div>
             <div className="px-3 lg:px-8">
                 <div className="text-3xl font-semibold text-myGreen mb-6 hidden lg:block">Hello there, I'm Nin.</div>

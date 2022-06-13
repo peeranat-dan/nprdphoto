@@ -21,9 +21,10 @@ const ContactSection = props => {
             text: '+6683-777-2230'
         },
     ];
+    const myPhotoSrc = "https://firebasestorage.googleapis.com/v0/b/photography-profile.appspot.com/o/myPhoto%2FS__117637413.jpg?alt=media&token=7d05db2f-a379-4b45-96c3-4fb00fcb5d97";
     return (
-        <div className="py-4 lg:py-48 px-5 lg:px-[20rem]">
-            <div className="flex flex-col lg:flex-row justify-between">
+        <div className="py-4 lg:py-48 px-5 lg:px-[10rem] xl:px-[20rem]">
+            <div className="flex flex-col md:flex-row justify-between">
                 <div>
                     <div  className="text-3xl font-semibold">Contact</div>
                     <div className="mt-8 tracking-wide">
@@ -35,7 +36,7 @@ const ContactSection = props => {
                         })}
                     </div>
                 </div>
-                <img className="rounded-lg mt-4 lg:my-0" src="https://drive.google.com/uc?export=view&id=1nzfdFUav6DY05i19N8Id05tiEy4BEChU"/>
+                <img className="rounded-lg mt-4 lg:my-0" src={myPhotoSrc}/>
             </div>
         </div>
     );

@@ -41,8 +41,8 @@ const ImageCarousel = (props) => {
             }}
         >
             {photos.map(d => {
-                return <SwiperSlide key={d.id}>
-                    <img className="mx-auto w-[250px] h-[400px] sm:h-[350px] object-cover shadow-lg rounded-lg" src={`https://drive.google.com/uc?export=view&id=${d.id}`} />
+                return <SwiperSlide key={d.url}>
+                    <img className="mx-auto w-[250px] h-[400px] sm:h-[350px] object-cover shadow-lg rounded-lg" src={d.url} />
                 </SwiperSlide>
             })}
         </Swiper>

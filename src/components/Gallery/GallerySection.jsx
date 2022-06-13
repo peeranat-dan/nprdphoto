@@ -9,15 +9,15 @@ const GallerySection = () => {
     return (
         <div className="w-full mx-auto px-2 pt-2 sm:mb-36">
             <div className="">
-                <div className="hidden lg:block mx-auto md:mx-10">
+                <div className="hidden md:block mx-auto md:mx-10">
                     <ImageCarousel photos={photos} />
                 </div>
-                <div className="hidden lg:block mx-auto md:mx-10 mt-4">
+                <div className="hidden md:block mx-auto md:mx-10 mt-4">
                     <ImageCarousel photos={casualPhotos} />
                 </div>
-                <div className="flex flex-col lg:hidden mx-auto md:mx-10 mt-3">
+                <div className="flex flex-col md:hidden mx-auto md:mx-10 mt-3">
                     {[...photos, ...casualPhotos].map(photo => {
-                        return <PhotoCard key={photo.id} config={photo} />
+                        return <PhotoCard key={photo.url} config={photo} />
                     })}
                 </div>
             </div>
