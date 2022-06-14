@@ -29,18 +29,18 @@ const App = () => {
             <div className="bg-stone-100 w-full min-h-screen max-h-fit flex flex-col" id="top">
               <NavBar />
               <div className="text-center my-6 md:my-12 lg:my-24 select-none">
-                <span className="text-xl sm:text-3xl md:text-5xl font-semibold">PEERANAT DANAIDUSADEEKUL</span>
-                <div className="w-12 h-1 bg-myGreen mx-auto my-2.5" />
-                See my schedule
+                <span className="text-2xl sm:text-3xl md:text-5xl font-semibold">PEERANAT DANAIDUSADEEKUL</span>
+                <div className="w-12 h-1 bg-myGreen mx-auto my-2.5 invisible" />
+                
                 <Link
-                    className="ml-1 text-myGreen hover:text-myGreenHover hover:underline transition-all duration-200 cursor-pointer"
+                    className="bg-myGreen hover:bg-myGreenHover p-2 rounded-lg text-white transition-all duration-200 tracking-wide cursor-pointer"
                     activeClass="active"
                     to="event"
                     spy={true}
                     smooth={true}
                     offset={-100}
                     duration={500}
-                >here</Link>
+                >SEE MY AVAILABLE DATE</Link>
               </div>
               <div id="gallery">
                 <GallerySection />

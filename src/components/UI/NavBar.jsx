@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-scroll";
-import Drawer from "./Drawer";
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const NavBar = () => {
@@ -30,40 +30,36 @@ const NavBar = () => {
     const toggleSideBar = () => {
         setShowSideBar(!showSideBar);
     };
+
+    const home = () => {
+        window.location.reload();
+    };
     return (
         <>
-            <nav className="sticky top-0 z-50 flex lg:justify-between lg:px-32 py-6 md:py-8 select-none bg-slate-50">
-                {showSideBar && <Drawer showSideBar={showSideBar}  onToggle={toggleSideBar} section={section}/>}
-                <button onClick={toggleSideBar} className="lg:hidden mx-3">
-                    <MenuIcon className="focus:rotate-90" />
+            <nav className="sticky top-0 z-50 flex lg:justify-between md:px-32 py-6 md:py-8 select-none bg-stone-100">
+                <button onClick={toggleSideBar} className="md:hidden mx-3">
+                    { showSideBar ? <CloseIcon />: <MenuIcon /> }
                 </button>
-                <span className="text-3xl font-semibold text-myGreenHover">NPRDPHOTO</span>
-                <ul className="hidden lg:flex space-x-8 tracking-widest">
-                    {section.map(li => {
-                        return <li key={li.text}>
+                <span className="text-3xl font-semibold text-myGreenHover hover:cursor-pointer" onClick={home}>NPRDPHOTO</span>
+                <ul className={`md:flex md:items-center md:pb-0 pb-6 absolute md:static bg-stone-100 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in border-opacity-60 border-b-2 md:border-0 border-myGreen ${showSideBar ? 'top-20 ':'top-[-490px]'}`}>
+                    {
+                        section.map((link)=>(
+                        <li key={link.text} className='md:ml-8 text-xl md:my-0 my-5'>
                             <Link
-                                className="hover:text-myGreen transition duration-200 cursor-pointer"
+                                className="hover:text-myGreen transition-all duration-200 cursor-pointer"
                                 activeClass="active"
-                                to={li.href}
+                                to={link.href}
                                 spy={true}
+                                onClick={toggleSideBar}
                                 smooth={true}
                                 offset={-100}
                                 duration={500}
-                            >{li.text}</Link>
-                        </li>;
-                    })}
+                            >{link.text}</Link>
+                        </li>
+                        ))
+                    }
                 </ul>
             </nav>
-            {/*<div className="md:hidden">*/}
-            {/*    <AppBar position="static">*/}
-            {/*        <Toolbar className="flex">*/}
-            {/*            <button>*/}
-            {/*                <MenuIcon />*/}
-            {/*            </button>*/}
-            {/*            <span className="text-2xl md:text-3xl font-semibold mx-5">NPRDPHOTO</span>*/}
-            {/*        </Toolbar>*/}
-            {/*    </AppBar>*/}
-            {/*</div>*/}
         </>
     );
 };
